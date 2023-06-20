@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct CardListViewCell: View {
-    @Environment(\.colorScheme) var colorScheme
     @EnvironmentObject private var viewModel: CardListViewModel
     @Binding var isSelected: Bool
     @State private var image: UIImage?
