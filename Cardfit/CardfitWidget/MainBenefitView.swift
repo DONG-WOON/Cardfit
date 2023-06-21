@@ -8,28 +8,16 @@
 import SwiftUI
 import WidgetKit
 
-struct CardBenefit {
-    let category: String
-    let title: String
-    let description: String
-}
-
-let exBenefit: [CardBenefit] = [
-    CardBenefit(category: "1", title: "간편 결제", description: "간편결제시 15% 할인"),
-    CardBenefit(category: "2", title: "놀이공원", description: "놀이공원에서 10% 할인"),
-    CardBenefit(category: "3", title: "편의점", description: "편의점에서 결제시 5% 할인")
-]
-
 struct MainBenefitView: View {
-    var benefit: [CardBenefit]
+    let card: Card
     
     var body: some View {
         ZStack(alignment: .topTrailing) {
             VStack(alignment: .leading, spacing: 0) {
-                TitleLabel(title: "국민 Balance 카드", font: .title2)
+                TitleLabel(title: card.cardName ?? String(), font: .title2)
                     .padding([.top, .leading, .bottom], 15)
-                ForEach(benefit, id: \.category) { benefit in
-                    MainBenefitViewCell(title: "\(benefit.title): \(benefit.description)")
+                ForEach(card.benefit, id: \.self) { benefit in
+                    MainBenefitViewCell(title: "\(benefit.keys.first): \(benefit.values)")
                 }
                 .padding([.leading, .trailing], 15)
                 .padding(.bottom, 5)
@@ -70,6 +58,6 @@ struct LogoHStack: View {
 
 struct MainBenefitView_Previews: PreviewProvider {
     static var previews: some View {
-        MainBenefitView(benefit: exBenefit).previewContext(WidgetPreviewContext(family: .systemExtraLarge))
+        MainBenefitView(card: Card(benefit: Benefits())).previewContext(WidgetPreviewContext(family: .systemLarge))
     }
 }

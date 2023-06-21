@@ -73,6 +73,6 @@ struct CardListViewCell: View {
 
 struct CardListViewCell_Previews: PreviewProvider {
     static var previews: some View {
-        CardListViewCell(isSelected: .constant(false), card: .init(cardNumber: ""), company: .bc)
+        CardListViewCell(isSelected: .constant(false), card: .init(cardNumber: "", benefit: Benefits()), company: .bc)
     }
 }

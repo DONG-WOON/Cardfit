@@ -26,6 +26,11 @@
 		721825972A415E7600D5F282 /* MainBenefitViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721825952A415E7600D5F282 /* MainBenefitViewCell.swift */; };
 		721825992A415EE800D5F282 /* TitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721825982A415EE800D5F282 /* TitleLabel.swift */; };
 		7218259A2A415EE800D5F282 /* TitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721825982A415EE800D5F282 /* TitleLabel.swift */; };
+		7218259B2A41BE7500D5F282 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721E76EF2A20BFE4001DFBBF /* Persistence.swift */; };
+		7218259C2A41BE9300D5F282 /* Cardfit.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 721E76F12A20BFE4001DFBBF /* Cardfit.xcdatamodeld */; };
+		721825A22A42AEB100D5F282 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 721825722A3FF8A500D5F282 /* WidgetKit.framework */; };
+		721825A32A42AEB100D5F282 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 721825742A3FF8A500D5F282 /* SwiftUI.framework */; };
+		721825AE2A42AEB300D5F282 /* ddExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 721825A12A42AEB100D5F282 /* ddExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		721E76E72A20BFE2001DFBBF /* CardfitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721E76E62A20BFE2001DFBBF /* CardfitApp.swift */; };
 		721E76E92A20BFE2001DFBBF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721E76E82A20BFE2001DFBBF /* ContentView.swift */; };
 		721E76EB2A20BFE4001DFBBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 721E76EA2A20BFE4001DFBBF /* Assets.xcassets */; };
@@ -63,6 +68,13 @@
 			remoteGlobalIDString = 7218256F2A3FF8A500D5F282;
 			remoteInfo = CardfitWidgetExtension;
 		};
+		721825AC2A42AEB300D5F282 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 721E76DB2A20BFE2001DFBBF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 721825A02A42AEB100D5F282;
+			remoteInfo = ddExtension;
+		};
 		AAEFAEA42A2F192600B9170C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 721E76DB2A20BFE2001DFBBF /* Project object */;
@@ -86,6 +98,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				721825AE2A42AEB300D5F282 /* ddExtension.appex in Embed Foundation Extensions */,
 				721825832A3FF8A600D5F282 /* CardfitWidgetExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
@@ -107,6 +120,7 @@
 		721825922A415E0700D5F282 /* CardImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardImageView.swift; sourceTree = "<group>"; };
 		721825952A415E7600D5F282 /* MainBenefitViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBenefitViewCell.swift; sourceTree = "<group>"; };
 		721825982A415EE800D5F282 /* TitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleLabel.swift; sourceTree = "<group>"; };
+		721825A12A42AEB100D5F282 /* ddExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ddExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		721E76E32A20BFE2001DFBBF /* Cardfit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cardfit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		721E76E62A20BFE2001DFBBF /* CardfitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardfitApp.swift; sourceTree = "<group>"; };
 		721E76E82A20BFE2001DFBBF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -143,6 +157,15 @@
 			files = (
 				721825752A3FF8A500D5F282 /* SwiftUI.framework in Frameworks */,
 				721825732A3FF8A500D5F282 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7218259E2A42AEB100D5F282 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				721825A32A42AEB100D5F282 /* SwiftUI.framework in Frameworks */,
+				721825A22A42AEB100D5F282 /* WidgetKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,6 +268,7 @@
 				AAEFAE9E2A2F192500B9170C /* CardfitUITests.xctest */,
 				AAEFAEAD2A2F193300B9170C /* CardfitTests.xctest */,
 				721825702A3FF8A500D5F282 /* CardfitWidgetExtension.appex */,
+				721825A12A42AEB100D5F282 /* ddExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -335,6 +359,23 @@
 			productReference = 721825702A3FF8A500D5F282 /* CardfitWidgetExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
+		721825A02A42AEB100D5F282 /* ddExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 721825AF2A42AEB300D5F282 /* Build configuration list for PBXNativeTarget "ddExtension" */;
+			buildPhases = (
+				7218259D2A42AEB100D5F282 /* Sources */,
+				7218259E2A42AEB100D5F282 /* Frameworks */,
+				7218259F2A42AEB100D5F282 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ddExtension;
+			productName = ddExtension;
+			productReference = 721825A12A42AEB100D5F282 /* ddExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		721E76E22A20BFE2001DFBBF /* Cardfit */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 721E76F62A20BFE4001DFBBF /* Build configuration list for PBXNativeTarget "Cardfit" */;
@@ -348,6 +389,7 @@
 			);
 			dependencies = (
 				721825822A3FF8A600D5F282 /* PBXTargetDependency */,
+				721825AD2A42AEB300D5F282 /* PBXTargetDependency */,
 			);
 			name = Cardfit;
 			packageProductDependencies = (
@@ -408,6 +450,9 @@
 					7218256F2A3FF8A500D5F282 = {
 						CreatedOnToolsVersion = 14.3;
 					};
+					721825A02A42AEB100D5F282 = {
+						CreatedOnToolsVersion = 14.3;
+					};
 					721E76E22A20BFE2001DFBBF = {
 						CreatedOnToolsVersion = 14.3;
 					};
@@ -441,6 +486,7 @@
 				AAEFAE9D2A2F192500B9170C /* CardfitUITests */,
 				AAEFAEAC2A2F193300B9170C /* CardfitTests */,
 				7218256F2A3FF8A500D5F282 /* CardfitWidgetExtension */,
+				721825A02A42AEB100D5F282 /* ddExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -451,6 +497,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				7218258B2A400DF000D5F282 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7218259F2A42AEB100D5F282 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -490,10 +543,19 @@
 				7218258D2A400FB600D5F282 /* MainBenefitView.swift in Sources */,
 				721825942A415E0700D5F282 /* CardImageView.swift in Sources */,
 				7218258E2A400FC300D5F282 /* Card.swift in Sources */,
+				7218259C2A41BE9300D5F282 /* Cardfit.xcdatamodeld in Sources */,
 				7218257A2A3FF8A500D5F282 /* CardfitWidget.swift in Sources */,
 				7218259A2A415EE800D5F282 /* TitleLabel.swift in Sources */,
 				7218257F2A3FF8A600D5F282 /* CardfitWidget.intentdefinition in Sources */,
 				721825912A415CBD00D5F282 /* Color.swift in Sources */,
+				7218259B2A41BE7500D5F282 /* Persistence.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7218259D2A42AEB100D5F282 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -552,6 +614,11 @@
 			isa = PBXTargetDependency;
 			target = 7218256F2A3FF8A500D5F282 /* CardfitWidgetExtension */;
 			targetProxy = 721825812A3FF8A600D5F282 /* PBXContainerItemProxy */;
+		};
+		721825AD2A42AEB300D5F282 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 721825A02A42AEB100D5F282 /* ddExtension */;
+			targetProxy = 721825AC2A42AEB300D5F282 /* PBXContainerItemProxy */;
 		};
 		AAEFAEA52A2F192600B9170C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -612,6 +679,60 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Cardfit.CardfitWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		721825B02A42AEB300D5F282 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = dd/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = dd;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Cardfit.dd;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		721825B12A42AEB300D5F282 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = dd/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = dd;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Cardfit.dd;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -872,6 +993,15 @@
 			buildConfigurations = (
 				721825852A3FF8A600D5F282 /* Debug */,
 				721825862A3FF8A600D5F282 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		721825AF2A42AEB300D5F282 /* Build configuration list for PBXNativeTarget "ddExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				721825B02A42AEB300D5F282 /* Debug */,
+				721825B12A42AEB300D5F282 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

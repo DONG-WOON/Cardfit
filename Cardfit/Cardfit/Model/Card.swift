@@ -16,7 +16,7 @@ struct Card: Identifiable, Hashable, Codable {
     var requiredPreviousMonthUsage: Int64?
     var mainBenefit: String?
     var company: String?
-    var benefit: Benefits?
+    var benefit: Benefits
     var offset: CGFloat? = 0
 }
 

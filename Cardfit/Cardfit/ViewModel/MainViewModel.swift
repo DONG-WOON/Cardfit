@@ -14,7 +14,7 @@ class MainViewModel: ObservableObject{
     // Detail Content....
     
     @Published var showCard = false
-    @Published var selectedCard : Card = Card()
+    @Published var selectedCard : Card = Card(benefit: Benefits())
     @Published var selectedColor : Color = .clear
     @Published var showContent = false
     
@@ -30,8 +30,9 @@ class MainViewModel: ObservableObject{
                 }
             }
             
-            let cards = cardEntities.map { cardEntity in
-                return Card(id: Int(cardEntity.cardNumber!), cardName: cardEntity.cardName, cardNumber: cardEntity.cardNumber, cardImageURL: cardEntity.cardImageURL, domesticAnnualFee: cardEntity.domesticAnnualFee, requiredPreviousMonthUsage: cardEntity.requiredPreviousMonthUsage, mainBenefit: cardEntity.mainBenefit, company: cardEntity.company, benefit: nil)
+            let cards = try cardEntities.map { cardEntity in
+                let benefit = try JSONDecoder().decode(Benefits.self, from: cardEntity.benefit ?? Data())
+                return Card(id: Int(cardEntity.cardNumber!), cardName: cardEntity.cardName, cardNumber: cardEntity.cardNumber, cardImageURL: cardEntity.cardImageURL, domesticAnnualFee: cardEntity.domesticAnnualFee, requiredPreviousMonthUsage: cardEntity.requiredPreviousMonthUsage, mainBenefit: cardEntity.mainBenefit, company: cardEntity.company, benefit: benefit)
             }
             return cards
         } catch {
