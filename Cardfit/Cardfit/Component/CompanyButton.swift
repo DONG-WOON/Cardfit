@@ -20,14 +20,14 @@ struct CompanyButton: View {
                     .padding(.all, 5)
                 Spacer()
                 Text(company.kor)
-                    .foregroundColor(.primary)
+                    .foregroundColor(Color("LabelColor"))
                     .font(.subheadline)
                     .fontWeight(.semibold)
                     .padding(.top, 5)
             }
             .padding(.all)
             .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background(.white)
+            .background(Color("CellColor"))
             .cornerRadius(20)
             .shadow(color: Color.black.opacity(0.1), radius: 20, x: 0, y: 0)
         }
