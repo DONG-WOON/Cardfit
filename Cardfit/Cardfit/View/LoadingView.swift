@@ -39,7 +39,7 @@ struct LoadingView: View {
                 .fontWeight(.semibold)
                 .foregroundColor(Color("AppColor"))
             
-            LoadingProgressView(percent: $percent)
+            LoadingProgressView(percent: $percent, startColor: .white, endColor: Color("AppColor"))
             
             Text(String(format: "%.0f", percent) + "%")
                 .font(.title2)
@@ -56,7 +56,7 @@ struct LoadingView: View {
             }
             .fontWeight(.bold)
             .font(.system(size: 20))
-            .foregroundColor(percent == CGFloat(100) ? Color("AppColor") : .red)
+            .foregroundColor(Color("AppColor"))
             .buttonStyle(.plain)
             .padding(.top, 50)
         }
@@ -95,6 +95,8 @@ struct LoadingView: View {
 struct LoadingProgressView: View {
     
     @Binding var percent: CGFloat
+    var startColor: Color
+    var endColor: Color
     
     var body: some View {
         ZStack(alignment: .leading) {
@@ -104,7 +106,7 @@ struct LoadingProgressView: View {
             
             Capsule()
                 .fill(
-                    LinearGradient(gradient: Gradient(colors: [.white, Color("AppColor")]), startPoint: .leading, endPoint: .trailing)
+                    LinearGradient(gradient: Gradient(colors: [startColor, endColor]), startPoint: .leading, endPoint: .trailing)
                 )
                 .frame(width: 300 * percent/100, height: 20)
         }
