@@ -11,6 +11,8 @@ struct CardListView: View {
     @ObservedObject private var viewModel: CardListViewModel
     
     @State private var isLoading = true
+    @State private var buttonIsDisabled = true
+    @State private var everyCardIsFetched = false
     
     init(company: CompanyList) {
         self.viewModel = CardListViewModel(company: company)
@@ -18,27 +20,44 @@ struct CardListView: View {
     
     var body: some View {
         ScrollView {
-            if isLoading {
-                ProgressView("Loading...")
-                    .padding()
-            } else {
+            VStack(spacing: 20) {
                 ForEach(viewModel.cardList, id: \.self) { card in
                     CardListViewCell(isSelected: bindingForCard(card), card: card, company: viewModel.company)
                         .environmentObject(viewModel)
+                    
                 }
-            }
-        }
-        .onAppear {
-            Task(priority: .background) {
-                let result = await viewModel.fetchCardList()
-                switch result {
-                case .success(let cards):
-                    viewModel.cardList = cards
-                    isLoading = false
-                case .failure(let error):
-                    print(error)
+                
+                    
+                if everyCardIsFetched == false {
+                    if buttonIsDisabled == false {
+                        Button {
+                            Task {
+                                buttonIsDisabled = true
+                                await loadCardList()
+                                buttonIsDisabled = false
+                            }
+                        } label: {
+                            if !buttonIsDisabled {
+                                Image(systemName: "plus.circle.fill")
+                                    .resizable()
+                                    .frame(width: 50, height: 50)
+                            }
+                        }
+                    } else {
+                        VStack {
+                            HStack {
+                                DotView()
+                                DotView(delay: 0.2)
+                                DotView(delay: 0.4)
+                            }
+                            Text("데이터를 불러오는 중입니다.")
+                                .font(.title3)
+                                .foregroundColor(Color("AppColor"))
+                        }
+                    }
+                } else {
+                    Text("카드 더이상 없음.")
                 }
-            
             }
         }
         .toolbar {
@@ -53,6 +72,10 @@ struct CardListView: View {
                         .foregroundColor(.gray)
                 }
             }
+        }
+        .task {
+           await loadCardList()
+            buttonIsDisabled = false
         }
         .onDisappear {
             viewModel.selectedCards = []
@@ -72,6 +95,17 @@ struct CardListView: View {
                 }
             }
         )
+    }
+    
+    private func loadCardList() async {
+        let result = await viewModel.fetchCardList()
+        switch result {
+        case .success(let cards):
+            viewModel.cardList = cards
+            isLoading = false
+        case .failure(let error):
+            print(error)
+        }
     }
 }
 
