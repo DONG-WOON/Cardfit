@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7209806E2A6E010D00458185 /* LaunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7209806D2A6E010D00458185 /* LaunchScreen.swift */; };
+		721789D12A6E35A800A92945 /* DotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721789D02A6E35A800A92945 /* DotView.swift */; };
 		721825612A3C5D7900D5F282 /* CompanyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721825602A3C5D7900D5F282 /* CompanyList.swift */; };
 		721825BB2A43087F00D5F282 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 721825BA2A43087F00D5F282 /* WidgetKit.framework */; };
 		721825BD2A43087F00D5F282 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 721825BC2A43087F00D5F282 /* SwiftUI.framework */; };
@@ -114,6 +115,7 @@
 
 /* Begin PBXFileReference section */
 		7209806D2A6E010D00458185 /* LaunchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreen.swift; sourceTree = "<group>"; };
+		721789D02A6E35A800A92945 /* DotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotView.swift; sourceTree = "<group>"; };
 		721825602A3C5D7900D5F282 /* CompanyList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyList.swift; sourceTree = "<group>"; };
 		721825B82A43087F00D5F282 /* CardfitWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = CardfitWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		721825BA2A43087F00D5F282 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
@@ -228,6 +230,7 @@
 			children = (
 				72AE832F2A29EC8E00390AF8 /* CompanyButton.swift */,
 				721E77732A28C5F6001DFBBF /* CardListViewCell.swift */,
+				721789D02A6E35A800A92945 /* DotView.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -623,6 +626,7 @@
 				721E77742A28C5F6001DFBBF /* CardListViewCell.swift in Sources */,
 				7209806E2A6E010D00458185 /* LaunchScreen.swift in Sources */,
 				72D3EAA42A4928CC004CA733 /* CardfitWidget.intentdefinition in Sources */,
+				721789D12A6E35A800A92945 /* DotView.swift in Sources */,
 				AA811A382A3B8C50006AE3FF /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
