@@ -22,9 +22,9 @@ iOS
 |  아키텍처      | 프레임워크 | 라이브러리           |
 |    --          |     --     |     --               |
 |   MVVM         |  SwiftUI   | Firebase Firestore   |
-|                |  Realm     | Firebase Storage     | 
-|                |  Combine   |                      |
-|                |  WidgetKit |                      |
+|                |  WidgetKit | Firebase Storage     | 
+|                |  Combine   |         Realm        |
+
 
 BE
 |   프레임워크  |        라이브러리       |
