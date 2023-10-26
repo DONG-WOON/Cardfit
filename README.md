@@ -1,9 +1,11 @@
+
 # Cardfit
 ![image](https://github.com/DONG-WOON/Cardfit/assets/80871083/09ce394f-c821-4785-be9b-ef26ccd1a199)
-
-## 멤버
-    🍊Huko: https://github.com/ykm989
-    🍅Domb: https://github.com/DONG-WOON
+## 소개
+사용자의 카드를 앱으로 등록 후 혜택을 위젯으로 확인할 수 있는 서비스
+## 팀구성
+ 🍊 김경호(Huko)
+ 🍅 서동운(Domb)
 ## 기간
 23/05 ~ 23/06 (2개월)
 
